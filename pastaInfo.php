@@ -98,9 +98,9 @@ $yield = $quantity / $div;
         <h3>To cook <?=$quantity?> ounces of <?=$pasta?> with <?=$cook?> consistency,
             you will first need to bring <?=$water?> quarts of very salty water to a hard boil.
             Next, you add in the full amount of pasta while occasionally stirring for the first two minutes.
-            Remember to keep the heat high so that water stays at a hard boil the entire time.
-            <?=$pasta?> with a <?=$cook?> consistency will take <?=$time?> total minutes to finish cooking.
-            Once this time has passed reserve 1 cup of the pasta water and then strain the pasta.
+            Remember to keep the heat high so that the water stays at a hard boil the entire time. The desired
+            cooking time to achieve <?=$cook?> <?=$pasta?> will be <?=$time?> minutes. After the pasta has
+            boiled for this amount of time, reserve 1 cup of the pasta water and then strain the pasta.
             Place the pasta into a large sauce pan and combine with reserved pasta water and warmed pasta sauce. Heat
             together for 2 minutes. You will have approximately <?=$yield?> servings of <?=$pasta?> to enjoy! </h2>
         <?php endif; ?>
