@@ -48,7 +48,7 @@ Project: Project 2 - Web Form Submission Application
                         -->
                         <div class='form-group'>
                             <label for='quantity'> Ounces of Pasta to be cooked (1-32): </label>
-                            <input type='number' name='quantity' min='1' max='32' value='8'>
+                            <input type='number' name='quantity' min='1' max='32' value='8' id='quantity'>
                         </div>
                         <!-- Radio button for the type of cook on the pasta, defaults to al dente -->
                         <div class='form-group'>
