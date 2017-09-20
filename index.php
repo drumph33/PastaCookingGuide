@@ -13,12 +13,8 @@ Project: Project 2 - Web Form Submission Application
         <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css' rel='stylesheet'>
         <!--<link rel="stylesheet" type="text/css" href="project2.css">-->
     </head>
-
     <body>
-
-
         <h1>Pasta Cooking Guide</h1>
-
         <!-- User Input Form -->
         <form method='POST' action='pastaInfo.php'>
             <!-- Drop down menu to select the type of pasta the user is cooking -->
@@ -26,15 +22,15 @@ Project: Project 2 - Web Form Submission Application
                 <label for='pasta'>Select which type of pasta you want to cook</label>
                 <select name='pasta' id='pasta'>
                     <option value='choose'>Choose a pasta...</option>
-                    <option value='Penne'>Penne</option>
-                    <option value='Rigatoni'>Rigatoni</option>
-                    <option value='Rotini'>Rotini</option>
-                    <option value='Ziti'>Ziti</option>
-                    <option value='Spaghetti'>Spaghetti</option>
-                    <option value='Vermicelli'>Vermicelli</option>
-                    <option value='Fettuccine'>Fettuccine</option>
-                    <option value='Linguine'>Linguine</option>
-                    <option value='Farfalle'>Farfalle</option>
+                    <option value='penne'>Penne</option>
+                    <option value='rigatoni'>Rigatoni</option>
+                    <option value='rotini'>Rotini</option>
+                    <option value='ziti'>Ziti</option>
+                    <option value='spaghetti'>Spaghetti</option>
+                    <option value='vermicelli'>Vermicelli</option>
+                    <option value='fettuccine'>Fettuccine</option>
+                    <option value='linguine'>Linguine</option>
+                    <option value='farfalle'>Farfalle</option>
                 </select>
             </div>
             <!--
@@ -45,7 +41,6 @@ Project: Project 2 - Web Form Submission Application
                 <label for='quantity'> Ounces of Pasta (1-32): </label>
                 <input type='number' name='quantity' min='1' max='32' value='8'>
             </div>
-
             <!-- Radio button for the type of cook on the pasta, defaults to al dente -->
             <div class='form-group'>
                 <fieldset class='radios'>
@@ -54,15 +49,10 @@ Project: Project 2 - Web Form Submission Application
                     <label><input type='radio' name='cook' value='soft'> Soft</label>
                 </fieldset>
             </div>
-
             <!-- Form submission buttion -->
             <div class='form-group'>
                 <input type='submit' class='btn btn-primary btn-sm'>
             </div>
-
-
-
-
-
+        </form>
     </body>
 </html>
