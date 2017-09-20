@@ -18,7 +18,7 @@ Project: Project 2 - Web Form Submission Application
         <div class='container'>
             <h4>This is an easy guide to help you cook perfect pasta.  Simply fill out the form below with
             some basic information about the pasta you would like to cook, how much you plan to cook and what
-            kind of cosistency you would like the pasta to have.</h4>
+            kind of consistency you would like the pasta to have.</h4>
         </div>
         <!-- User Input Form -->
         <div class='container'>
