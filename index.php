@@ -47,7 +47,7 @@ Project: Project 2 - Web Form Submission Application
                         Value is set to default of 8 and must be between 1-32
                         -->
                         <div class='form-group'>
-                            <label for='quantity'> Ounces of Pasta to be cooked (1-32): </label>
+                            <label for='quantity'> Ounces of dry pasta to be cooked (1-32): </label>
                             <input type='number' name='quantity' min='1' max='32' value='8' id='quantity'>
                         </div>
                         <!-- Radio button for the type of cook on the pasta, defaults to al dente -->
