@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Name: Dylan Rumph
-Date: September 19, 2017
+Date: September 20, 2017
 Course: CSCI E-15: Dynamic Web Applications
 Project: Project 2 - Web Form Submission Application
 -->
@@ -28,7 +28,7 @@ $data = getData($_POST);
                     <div class="panel-heading"><h1 class='text-center'>Pasta Cooking Instructions</h1></div>
                     <h3 class='text-justify'>To cook <?=$data['quantity']?> ounces of <?=$data['pasta']?> with <?=$data['cook']?> consistency,
                         you will first need to bring <?=$data['water']?> quarts of very salty water to a hard boil.
-                        Next, you add in the full amount of pasta while occasionally stirring for the first two minutes.
+                        Next, you add in the full amount of pasta while occasionally stirring for the first 2 minutes.
                         Remember to keep the heat high so that the water stays at a hard boil the entire time. The desired
                         cooking time to achieve <?=$data['cook']?> <?=$data['pasta']?> will be <?=$data['time']?> minutes. After the pasta has
                         boiled for this amount of time, reserve 1/8 cup of the pasta water and then strain the pasta.
