@@ -93,8 +93,8 @@ function getData(array $input)
                 $water = 8;
             }
         }
-        //Calculates how many servings will be made by using the scalar set in the pasta list and the input quantity
-        $yield = $quantity / $div;
+        //Calculates how many servings will be made by using the scalar set in the pasta list and the input quantity. Rounds to one decimal place
+        $yield = round($quantity/$div, 1);
         $results = [
             'pasta'=>$pasta,
             'cook'=>$cook,
