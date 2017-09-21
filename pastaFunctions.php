@@ -1,3 +1,9 @@
+<!--
+Name: Dylan Rumph
+Date: September 20, 2017
+Course: CSCI E-15: Dynamic Web Applications
+Project: Project 2 - Web Form Submission Application
+-->
 <?php
 function getData(array $input)
     {
@@ -5,7 +11,7 @@ function getData(array $input)
         $pasta = '';
         $alDenteTime = 1;
         $softTime = 2;
-        $div = 1; #determines the yield of the pasta, long pasta uses 2.5 short pasta uses 2
+        $div = 1; #determines the yield of the pasta, long pasta uses 1.5 short pasta uses 2
         //Process the drop down menu selection of type of pasta
         //Each type of pasta has two separate cooking times and a value to calculate the amount of servings
         if (isset($input['pasta'])) {
@@ -15,12 +21,12 @@ function getData(array $input)
                 case 'farfalle':
                     $alDenteTime = 13;
                     $softTime = 15;
-                    $div = 2.5;
+                    $div = 1.5;
                     break;
                 case 'ziti':
                     $alDenteTime = 14;
                     $softTime = 15;
-                    $div = 2.5;
+                    $div = 1.5;
                     break;
                 case 'vermicelli':
                     $alDenteTime = 5;
@@ -30,12 +36,12 @@ function getData(array $input)
                 case 'rigatoni':
                     $alDenteTime = 12;
                     $softTime = 15;
-                    $div = 2.5;
+                    $div = 1.5;
                     break;
                 case 'rotini':
                     $alDenteTime = 8;
                     $softTime = 10;
-                    $div = 2.5;
+                    $div = 1.5;
                     break;
                 case 'spaghetti':
                     $alDenteTime = 8;
@@ -45,7 +51,7 @@ function getData(array $input)
                 case $pasta == 'penne':
                     $alDenteTime = 9;
                     $softTime = 13;
-                    $div = 2.5;
+                    $div = 1.5;
                     break;
                 case $pasta == 'linguine':
                     $alDenteTime = 9;
