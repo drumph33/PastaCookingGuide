@@ -22,17 +22,20 @@ $data = getData($_POST);
             <div class="alert alert-danger">
                 <strong>Error!</strong> You did not choose a type of pasta.
             </div>
-        <!-- If a pasta was chosen then display the instructions paragraph -->
+        <!-- If a pasta was chosen then display the results-->
         <?php else: ?>
             <div class='container'>
                 <h1 class='text-center'>Pasta Cooking Instructions</h1>
+                <!-- The what you will need section-->
                 <div class='panel-group'>
                     <div class='panel panel-info'>
                         <div class='panel-heading'><h2 class='text-center'>What You Will Need</h2></div>
                         <div class='panel-body'>
+                            <!-- Display the correct number of water images-->
                             <?php for($i = 0; $i < $data['water']; $i++): ?>
                                 <img src="images\water.jpg" alt="quart of water" height='80' width='80'>
                             <?php endfor; ?>
+                            <!-- Display the other images and text to sum up-->
                             <img src='images\salt.jpg' alt='salt' height='80' width='80'>
                             <img src='images\pot.png' alt='pot' height='80' width='80'>
                             <img src='images\pan.png' alt='pan' height='80' width='80'>
@@ -42,6 +45,7 @@ $data = getData($_POST);
                                  and <?=$data['quantity']?> oz. of dry <?=$data['pasta']?></h3>
                         </div>
                     </div>
+                    <!-- Directions paragraph-->
                     <div class='panel panel-info'>
                             <div class='panel-heading'><h2 class='text-center'>Directions</h2></div>
                             <div class='panel-body'>
@@ -57,7 +61,7 @@ $data = getData($_POST);
                         </div>
                     </div>
                 </div>
-                <img src="images\cook<?=$data['pasta']?>.jpg" alt="pasta">
+                <img class='img-responsive' src="images\cook<?=$data['pasta']?>.jpg" alt="cooked pasta">
             </div>
         <?php endif; ?>
     </body>
