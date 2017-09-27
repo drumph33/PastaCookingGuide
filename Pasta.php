@@ -1,11 +1,17 @@
-<!--
-Name: Dylan Rumph
-Date: September 20, 2017
-Course: CSCI E-15: Dynamic Web Applications
-Project: Project 2 - Web Form Submission Application
--->
 <?php
-function getData(array $input)
+namespace P2;
+class Pasta
+{
+    // Properties
+    private $input;
+    public $results;
+    //Methods
+    public function __construct($post)
+    {
+        //Store form data in a class property called $input
+        $this->input = $post;
+    }
+    public function getData()
     {
         //Initialize variables that may not get initialized otherwise which causes errors
         //$pasta = '';
@@ -15,7 +21,7 @@ function getData(array $input)
         //Process the drop down menu selection of type of pasta
         //Each type of pasta has two separate cooking times and a value to calculate the amount of servings
         //if (isset($input['pasta'])) {
-        $pasta = $input['pasta'];
+        $pasta = $this->input['pasta'];
             //Set variable values for each type of pasta
         switch ($pasta){
             case 'farfalle':
@@ -64,10 +70,9 @@ function getData(array $input)
                 $div = 2;
                 break;
             }
-
-        //Process the radio button values.  Since a default value was set there is no error case.
+        //Process the radio button values.
         //Sets cooking time to the appropiate value from the above list
-        $cook = $input['cook'];
+        $cook = $this->input['cook'];
 
         if ($cook == 'soft'){
                 $time = $softTime;
@@ -76,7 +81,7 @@ function getData(array $input)
             }
         //Process the quantity from the numerical text input
         //Sets the amount of water needed based on the amount of pasta to be cooked
-        $quantity = $input['quantity'];
+        $quantity = $this->input['quantity'];
         if ($quantity <= 4){
             $water = 3;
         }elseif ($quantity <= 12){
@@ -90,10 +95,10 @@ function getData(array $input)
         }else{
             $water = 8;
         }
-
         //Calculates how many servings will be made by using the scalar set in the pasta list and the input quantity. Rounds to one decimal place
         $yield = round($quantity/$div, 1);
-        $results = [
+        //Sets and returns the results
+        $this->results = [
             'pasta'=>$pasta,
             'cook'=>$cook,
             'quantity'=>$quantity,
@@ -101,5 +106,6 @@ function getData(array $input)
             'water'=>$water,
             'yield'=>$yield,
         ];
-        return $results;
+        return $this->results;
     }
+}

@@ -5,8 +5,9 @@ Date: September 20, 2017
 Course: CSCI E-15: Dynamic Web Applications
 Project: Project 2 - Web Form Submission Application
 -->
-<?php require 'pastaFunctions.php';
-$data = getData($_POST);
+<?php
+require 'Form.php';
+require 'Pasta.php';
 ?>
 <html lang="en">
     <head>
@@ -16,6 +17,28 @@ $data = getData($_POST);
         <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="project2.css">
     </head>
+
+    <?php
+    $form = new DWA\Form($_POST);
+    $pasta = new P2\Pasta($_POST);
+
+    if ($form->isSubmitted()) {
+        $errors = $form->validate(
+            [
+                'pasta' => 'required',
+                'quantity' => 'required|numeric|min:0|max:32'
+            ]
+        );
+    }
+    if(empty($errors)){
+        $data = $pasta->getData();
+    }
+    else {?>
+        <div class="alert alert-danger">
+            <strong>Error!</strong> <?=$errors[0]?>
+        </div>
+    <?php return;}?>
+
     <body>
         <!-- Display an error message if no pasta type was chosen-->
         <?php if($data['pasta']=='choose'): ?>
