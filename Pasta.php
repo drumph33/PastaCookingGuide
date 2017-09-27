@@ -26,9 +26,8 @@ class Pasta
         $div = 1; #determines the yield of the pasta, long pasta uses 1.5 short pasta uses 2
         //Process the drop down menu selection of type of pasta
         //Each type of pasta has two separate cooking times and a value to calculate the amount of servings
-        //if (isset($input['pasta'])) {
         $pasta = $this->input['pasta'];
-            //Set variable values for each type of pasta
+        //Set variable values for each type of pasta
         switch ($pasta){
             case 'farfalle':
                 $alDenteTime = 13;
@@ -75,19 +74,18 @@ class Pasta
                 $softTime = 13;
                 $div = 2;
                 break;
-            }
+        }
         //Process the radio button values.
-        //Sets cooking time to the appropiate value from the above list
         $cook = $this->input['cook'];
-
+        //Sets cooking time to the appropiate value from the above list
         if ($cook == 'soft'){
                 $time = $softTime;
         }else{
                 $time = $alDenteTime;
-            }
+        }
         //Process the quantity from the numerical text input
-        //Sets the amount of water needed based on the amount of pasta to be cooked
         $quantity = $this->input['quantity'];
+        //Sets the amount of water needed based on the amount of pasta to be cooked
         if ($quantity <= 4){
             $water = 3;
         }elseif ($quantity <= 12){
@@ -102,7 +100,12 @@ class Pasta
             $water = 8;
         }
         //Calculates how many servings will be made by using the scalar set in the pasta list and the input quantity. Rounds to one decimal place
-        $yield = round($quantity/$div, 1);
+        if ($quantity > 0){
+            $yield = round($quantity/$div, 1);
+        }
+        else{
+            $yield = 0;
+        }
         //Sets and returns the results
         $this->results = [
             'pasta'=>$pasta,
