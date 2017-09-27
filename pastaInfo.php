@@ -8,6 +8,13 @@ Project: Project 2 - Web Form Submission Application
 <?php
 require 'Form.php';
 require 'Pasta.php';
+
+$form = new DWA\Form($_POST);
+$pasta = new P2\Pasta($_POST);
+
+if ($form->isSubmitted()) {
+    $errors = $form->validate(['quantity' => 'required|numeric|min:0|max:32']);
+}
 ?>
 <html lang="en">
     <head>
@@ -17,36 +24,26 @@ require 'Pasta.php';
         <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="project2.css">
     </head>
-
     <?php
-    $form = new DWA\Form($_POST);
-    $pasta = new P2\Pasta($_POST);
-
-    if ($form->isSubmitted()) {
-        $errors = $form->validate(
-            [
-                'pasta' => 'required',
-                'quantity' => 'required|numeric|min:0|max:32'
-            ]
-        );
-    }
+    //If the data is valid proceed to process the form
     if(empty($errors)){
         $data = $pasta->getData();
     }
-    else {?>
+    else { ?>
+        <!-- If the data is not valid (no quantity) then display an error message-->
         <div class="alert alert-danger">
             <strong>Error!</strong> <?=$errors[0]?>
         </div>
+    <!-- Break from displaying results if an error was detected-->
     <?php return;}?>
-
-    <body>
-        <!-- Display an error message if no pasta type was chosen-->
-        <?php if($data['pasta']=='choose'): ?>
+    <!-- Display an error message if no pasta type was chosen-->
+    <?php if($data['pasta']=='choose'): ?>
             <div class="alert alert-danger">
                 <strong>Error!</strong> You did not choose a type of pasta.
             </div>
         <!-- If a pasta was chosen then display the results-->
-        <?php else: ?>
+    <?php else: ?>
+        <body>
             <div class='container'>
                 <h1 class='text-center'>Pasta Cooking Instructions</h1>
                 <!-- The what you will need section-->
@@ -59,11 +56,11 @@ require 'Pasta.php';
                                 <img src="images\water.jpg" alt="quart of water" height='80' width='80'>
                             <?php endfor; ?>
                             <!-- Display the other images and text to sum up-->
-                            <img src='images\salt.jpg' alt='salt' height='80' width='80'>
-                            <img src='images\pot.png' alt='pot' height='80' width='80'>
-                            <img src='images\pan.png' alt='pan' height='80' width='80'>
-                            <img src='images\sauce.png' alt='sauce' height='80' width='100'>
-                            <img src="images\<?=$data['pasta']?>.jpg" alt="pasta" height='80' width='80'>
+                            <img src='images/salt.jpg' alt='salt' height='80' width='80'>
+                            <img src='images/pot.png' alt='pot' height='80' width='80'>
+                            <img src='images/pan.png' alt='pan' height='80' width='80'>
+                            <img src='images/sauce.png' alt='sauce' height='80' width='100'>
+                            <img src="images/<?=$data['pasta']?>.jpg" alt="pasta" height='80' width='80'>
                             <h3 class='text-justify'><?=$data['water']?> quarts of water, lots of salt, a large pot, a large sauce pan, a sauce of your choosing,
                                  and <?=$data['quantity']?> oz. of dry <?=$data['pasta']?></h3>
                         </div>
@@ -84,7 +81,7 @@ require 'Pasta.php';
                         </div>
                     </div>
                 </div>
-                <img class='img-responsive' src="images\cook<?=$data['pasta']?>.jpg" alt="cooked pasta">
+                <img class='img-responsive' src="images/cook<?=$data['pasta']?>.jpg" alt="cooked pasta">
             </div>
         <?php endif; ?>
     </body>
