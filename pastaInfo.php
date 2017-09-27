@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Name: Dylan Rumph
-Date: September 20, 2017
+Date: September 26, 2017
 Course: CSCI E-15: Dynamic Web Applications
 Project: Project 2 - Web Form Submission Application
 -->
@@ -51,17 +51,19 @@ if ($form->isSubmitted()) {
                     <div class='panel panel-info'>
                         <div class='panel-heading'><h2 class='text-center'>What You Will Need</h2></div>
                         <div class='panel-body'>
-                            <!-- Display the correct number of water images-->
-                            <?php for($i = 0; $i < $data['water']; $i++): ?>
-                                <img src="images/water.jpg" alt="quart of water" height='80' width='80'>
-                            <?php endfor; ?>
-                            <!-- Display the other images and text to sum up-->
-                            <img src='images/salt.jpg' alt='salt' height='80' width='80'>
-                            <img src='images/pot.png' alt='pot' height='80' width='80'>
-                            <img src='images/pan.png' alt='pan' height='80' width='80'>
-                            <img src='images/sauce.png' alt='sauce' height='80' width='100'>
-                            <img src="images/<?=$data['pasta']?>.jpg" alt="pasta" height='80' width='80'>
-                            <h3 class='text-justify'><?=$data['water']?> quarts of water, lots of salt, a large pot, a large sauce pan, a sauce of your choosing,
+                            <div class='img-group'>
+                                <!-- Display the correct number of water images-->
+                                <?php for($i = 0; $i < $data['water']; $i++): ?>
+                                    <img src="images/water.jpg" alt="quart of water" height='80' width='80'>
+                                <?php endfor; ?>
+                                <!-- Display the other images and text to sum up-->
+                                <img src='images/salt.jpg' alt='salt' height='80' width='80'>
+                                <img src='images/pot.png' alt='pot' height='80' width='80'>
+                                <img src='images/pan.png' alt='pan' height='80' width='80'>
+                                <img src='images/sauce.png' alt='sauce' height='80' width='100'>
+                                <img src="images/<?=$data['pasta']?>.jpg" alt="pasta" height='80' width='80'>
+                            </div>
+                            <h4><?=$data['water']?> quarts of water, lots of salt, a large pot, a large sauce pan, a sauce of your choosing,
                                  and <?=$data['quantity']?> oz. of dry <?=$data['pasta']?></h3>
                         </div>
                     </div>
@@ -71,7 +73,7 @@ if ($form->isSubmitted()) {
                             <div class='panel-body'>
                             <h3 class='text-justify'>To cook <?=$data['quantity']?> ounces of <?=$data['pasta']?> with <?=$data['cook']?> consistency,
                             you will first need to bring <?=$data['water']?> quarts of very salty water to a hard boil.
-                            Next, you add in the full amount of pasta while occasionally stirring for the first 2 minutes.
+                            Next, add in the full amount of pasta while occasionally stirring for the first 2 minutes.
                             Remember to keep the heat high so that the water stays at a hard boil the entire time. The desired
                             cooking time to achieve <?=$data['cook']?> <?=$data['pasta']?> will be <?=$data['time']?> minutes. After the pasta has
                             boiled for this amount of time, reserve 1/8 cup of the pasta water and then strain the pasta.
