@@ -9,10 +9,11 @@ Project: Project 2 - Web Form Submission Application
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>DWA 15 Project 2</title>
+        <title>Pasta Cooking Instructions</title>
         <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
         <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="project2.css">
+        <link rel="browser icon" href="images/favicon.png">
     </head>
     <body>
     <!-- Display error in pasta field-->
@@ -49,7 +50,7 @@ Project: Project 2 - Web Form Submission Application
                             <img src='images/pot.png' alt='pot' height='80' width='80'>
                             <img src='images/pan.png' alt='pan' height='80' width='80'>
                             <img src='images/sauce.png' alt='sauce' height='80' width='100'>
-                            <img src="images/<?=$data['pasta']?>.jpg" alt="pasta" height='80' width='80'>
+                            <img src='images/<?=$data['pasta']?>.jpg' alt='pasta' height='80' width='80'>
                         </div>
                         <h5><?=$data['water']?> quarts of water, lots of salt, a large pot, a large sauce pan, a sauce of your choosing,
                              and <?=$data['quantity']?> oz. of dry <?=$data['pasta']?></h5>
