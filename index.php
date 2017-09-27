@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Name: Dylan Rumph
-Date: September 19, 2017
+Date: September 26, 2017
 Course: CSCI E-15: Dynamic Web Applications
 Project: Project 2 - Web Form Submission Application
 -->

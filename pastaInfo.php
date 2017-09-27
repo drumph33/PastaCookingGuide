@@ -53,7 +53,7 @@ if ($form->isSubmitted()) {
                         <div class='panel-body'>
                             <!-- Display the correct number of water images-->
                             <?php for($i = 0; $i < $data['water']; $i++): ?>
-                                <img src="images\water.jpg" alt="quart of water" height='80' width='80'>
+                                <img src="images/water.jpg" alt="quart of water" height='80' width='80'>
                             <?php endfor; ?>
                             <!-- Display the other images and text to sum up-->
                             <img src='images/salt.jpg' alt='salt' height='80' width='80'>
