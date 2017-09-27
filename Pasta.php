@@ -113,7 +113,7 @@ class Pasta
             'quantity'=>$quantity,
             'time'=>$time,
             'water'=>$water,
-            'yield'=>$yield,
+            'yield'=>$yield
         ];
         return $this->results;
     }
