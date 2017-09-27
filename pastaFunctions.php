@@ -16,7 +16,7 @@ function getData(array $input)
         //Each type of pasta has two separate cooking times and a value to calculate the amount of servings
         //if (isset($input['pasta'])) {
         $pasta = $input['pasta'];
-            //Set variable values for each type of pasta
+        //Set variable values for each type of pasta
         switch ($pasta){
             case 'farfalle':
                 $alDenteTime = 13;

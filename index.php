@@ -7,11 +7,12 @@ Project: Project 2 - Web Form Submission Application
 -->
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <title>DWA 15 Project 2</title>
+        <meta charset="utf-8">
+        <title>Pasta Guide</title>
         <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
         <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="project2.css">
+        <link rel="browser icon" href="images/favicon.png">
     </head>
     <body>
         <h1 class='text-center'>Pasta Cooking Guide</h1>
